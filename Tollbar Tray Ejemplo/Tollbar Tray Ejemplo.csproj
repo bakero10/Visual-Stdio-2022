@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Tollbar_Tray_Ejemplo</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="verisign.bmp" />
+    <None Remove="wmpnss_color32.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="verisign.bmp" />
+    <Resource Include="wmpnss_color32.bmp" />
+  </ItemGroup>
+
+</Project>

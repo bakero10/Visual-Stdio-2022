@@ -1,0 +1,21 @@
+﻿<Window x:Class="Tollbar_Tray_Ejemplo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tollbar_Tray_Ejemplo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ToolBarTray Background="Aquamarine">
+            <ToolBar Band="1" BandIndex="1">
+                <Button Height="200" Width="200">
+                    <Image Source="/verisign.bmp"/>
+                </Button>
+                <Button Height="200" Width="200">
+                    <Image Source="/wmpnss_color32.bmp"/>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="HolaMundoMYSQL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HolaMundoMYSQL"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.093,0.2">
+        <Button x:Name="btnVersion" Content="Version MYSQL" HorizontalAlignment="Left" Margin="371,130,0,0" VerticalAlignment="Top" Click="btnVersion_Click"/>
+        <Button x:Name="btnPaises" Content="PAises ABW" HorizontalAlignment="Left" Margin="351,217,0,0" VerticalAlignment="Top" Height="28" Width="94" Click="btnPaises_Click"/>
+
+    </Grid>
+</Window>

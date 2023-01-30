@@ -20,32 +20,25 @@ namespace TalleresFitipaldi
     /// </summary>
     public partial class MainWindow : Window
     {
-        PaginaPrincipla pagina;
+        PaginaPrincipal pagina;
         public MainWindow()
         {
             InitializeComponent();
-            pagina= new PaginaPrincipla();  
+            pagina= new PaginaPrincipal();  
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if ((!textboxUsuario.Text.Equals("")))
-            {
-                if (textboxUsuario.Text.Equals("Pepe") && textPassword.Equals("pepe"))
+        {        
+                if (textboxUsuario.Text.Equals("Pepe"))
                 {
                     MessageBox.Show("Usuario y contraseña correcto!");
                     pagina.Show();
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Usuario o contraseña incorrecto!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debes introducir los campos usuario y contraseña para entrar.", "Error.");
-            }
-
+                } 
         }
     }
 }

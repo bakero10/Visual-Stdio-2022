@@ -14,12 +14,10 @@ using System.Windows.Shapes;
 
 namespace TalleresFitipaldi
 {
-    /// <summary>
-    /// Lógica de interacción para PaginaPrincipla.xaml
-    /// </summary>
-    public partial class PaginaPrincipla : Window
+    
+    public partial class Cliente : Window
     {
-        public PaginaPrincipla()
+        public Cliente()
         {
             InitializeComponent();
         }

@@ -7,20 +7,149 @@
         mc:Ignorable="d"
         Title="Clientes" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF41697E" Offset="1"/>
+                <GradientStop Color="#FF4F85A0" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition />
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="dataGrid" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Background="#FFF6F7F8" BorderBrush="#FF5486B7" Foreground="#FF150505" Grid.ColumnSpan="1">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="IdCliente" />
-                <DataGridTextColumn Header="Nombre"/>
-                <DataGridTextColumn Header="Apellidos"/>
-                <DataGridTextColumn Header="DNI"/>
-                <DataGridTextColumn Header="Telefono"/>
-                <DataGridTextColumn Header="Direccion"/>
-                <DataGridTextColumn Header="Email"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="275*" />
+            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="342*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Margin="0,217,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Grid Width="442">
+                <DataGrid AutoGenerateColumns="False" CanUserAddRows="True" Margin="0,0,0,95" Background="White" GridLinesVisibility="All" HorizontalAlignment="Stretch" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="IdUsuario"/>
+                        <DataGridTextColumn Header="Nombre"/>
+                        <DataGridTextColumn Header="Apellidos"/>
+                        <DataGridTextColumn Header="DNI"/>
+                        <DataGridTextColumn Header="Telefono"/>
+                        <DataGridTextColumn Header="Direccion"/>
+                        <DataGridTextColumn Header="Correo"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
+
+        </StackPanel>
+        <StackPanel Grid.Row="0" Margin="0,0,154,0">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF41697E" Offset="1"/>
+                    <GradientStop Color="#FF4F85A0" Offset="0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label x:Name="labelId" Content="Id Usuario:" Width="118" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Height="23">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.361"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.246"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="labelNombre" Content="Nombre:" Width="118" RenderTransformOrigin="0.5,0.5" Height="23">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.361"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.246"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="labelApellido" Content="Apellido:" Width="118" RenderTransformOrigin="0.5,0.5" Height="23">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.361"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.246"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="labelDNI" Content="DNI:" Width="118" RenderTransformOrigin="0.5,0.5" Height="23">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.361"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.246"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="labelTelefono" Content="Telefono:" Width="118" RenderTransformOrigin="0.5,0.5" Height="23">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.361"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.246"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="labelDireccion" Content="Dirección:" Width="118" RenderTransformOrigin="0.5,0.5" Height="23">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.361"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.246"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="labelCorreo" Content="Correo:" Width="118" RenderTransformOrigin="0.5,0.5" Height="23">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.361"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.246"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </StackPanel>
+        <TextBox x:Name="textBoxId" HorizontalAlignment="Left" Margin="121,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
+        <StackPanel Grid.Column="1">
+            <Label x:Name="labelMatricula" Content="Matricula:" HorizontalAlignment="Right" Width="80" Height="23.96"/>
+            <Label x:Name="labelMarca" Content="Marca:" HorizontalAlignment="Right" Width="80" Height="23.96"/>
+            <Label x:Name="labelModelo" Content="Modelo:" HorizontalAlignment="Right" Width="81" Height="23.96"/>
+            <Label x:Name="labelColor" Content="Color:" HorizontalAlignment="Right" Width="80" Height="23.96"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBox x:Name="textBoxMatricula" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96"/>
+            <TextBox x:Name="textBoxMarca" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="textBoxModelo" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96" TextChanged="TextBox_TextChanged_1"/>
+            <TextBox x:Name="textBoxColor" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96"/>
+        </StackPanel>
+        <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Margin="121,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
+        <TextBox x:Name="textBoxApellido" HorizontalAlignment="Left" Margin="121,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
+        <TextBox x:Name="textBoxDNI" HorizontalAlignment="Left" Margin="121,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
+        <TextBox x:Name="textBoxTelefono" HorizontalAlignment="Left" Margin="121,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
+        <TextBox x:Name="textBoxDireccion" HorizontalAlignment="Left" Margin="121,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
+        <TextBox x:Name="textBoxCorreo" HorizontalAlignment="Left" Margin="121,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
+        <Button x:Name="botonInsertar" Grid.Column="2" Content="Insertar" HorizontalAlignment="Left" Margin="28,21,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>
+        <Button x:Name="botonBuscar" Grid.Column="2" Content="Buscar" HorizontalAlignment="Left" Margin="28,63,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>
+        <Button x:Name="botonActualizar" Grid.Column="2" Content="Actualizar" HorizontalAlignment="Left" Margin="28,109,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>
+        <Button x:Name="botonBorrar" Grid.Column="2" Content="Borrar" HorizontalAlignment="Left" Margin="28,154,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>
+        <TextBox x:Name="textBoxIntroduceMatricula" Grid.Column="2" HorizontalAlignment="Left" Margin="158,61,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Height="28" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.348"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.498"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Grid.Column="2" Content="&quot;Introduce la matricula&quot;" HorizontalAlignment="Left" Margin="171,22,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
     </Grid>
 </Window>

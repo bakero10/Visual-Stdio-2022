@@ -17,27 +17,26 @@
             <RowDefinition />
             <RowDefinition/>
         </Grid.RowDefinitions>
-<<<<<<< HEAD
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="275*" />
             <ColumnDefinition Width="183*"/>
             <ColumnDefinition Width="342*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Margin="0,217,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <Grid Width="442">
-                <DataGrid AutoGenerateColumns="False" CanUserAddRows="True" Margin="0,0,0,95" Background="White" GridLinesVisibility="All" HorizontalAlignment="Stretch" >
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="IdUsuario"/>
-                        <DataGridTextColumn Header="Nombre"/>
-                        <DataGridTextColumn Header="Apellidos"/>
-                        <DataGridTextColumn Header="DNI"/>
-                        <DataGridTextColumn Header="Telefono"/>
-                        <DataGridTextColumn Header="Direccion"/>
-                        <DataGridTextColumn Header="Correo"/>
+            <Grid Width="460"/>
+            <StackPanel Height="217">
+                <DataGrid Height="218" RowHeight="25" ColumnWidth="65" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Width="459">
+                    <DataGrid.Columns >
+                        <DataGridTextColumn Header="Id Usuario:"/>
+                        <DataGridTextColumn Header="Nombre:"/>
+                        <DataGridTextColumn Header="Apellidos:"/>
+                        <DataGridTextColumn Header="DNI:"/>
+                        <DataGridTextColumn Header="Telefono:"/>
+                        <DataGridTextColumn Header="Dirección:"/>
+                        <DataGridTextColumn Header="Correo:"/>
                     </DataGrid.Columns>
                 </DataGrid>
-
-            </Grid>
+            </StackPanel>
 
         </StackPanel>
         <StackPanel Grid.Row="0" Margin="0,0,154,0">
@@ -152,18 +151,5 @@
             </TextBox.RenderTransform>
         </TextBox>
         <Label Grid.Column="2" Content="&quot;Introduce la matricula&quot;" HorizontalAlignment="Left" Margin="171,22,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
-=======
-        <DataGrid x:Name="dataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Background="#FFF6F7F8" BorderBrush="#FF5486B7" Foreground="#FF150505" VerticalContentAlignment="Center" Margin="0,289,0,0" Grid.RowSpan="2" Width="800">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="IdCliente" />
-                <DataGridTextColumn Header="Nombre"/>
-                <DataGridTextColumn Header="Apellidos"/>
-                <DataGridTextColumn Header="DNI"/>
-                <DataGridTextColumn Header="Telefono"/>
-                <DataGridTextColumn Header="Direccion"/>
-                <DataGridTextColumn Header="Email"/>
-            </DataGrid.Columns>
-        </DataGrid>
->>>>>>> actualizacion
     </Grid>
 </Window>

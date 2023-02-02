@@ -42,7 +42,7 @@
         <StackPanel Grid.Row="0" Margin="0,0,154,0">
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF41697E" Offset="1"/>
+                    <GradientStop Color="#FF49758D" Offset="1"/>
                     <GradientStop Color="#FF4F85A0" Offset="0"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
@@ -136,7 +136,7 @@
         <TextBox x:Name="textBoxTelefono" HorizontalAlignment="Left" Margin="121,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
         <TextBox x:Name="textBoxDireccion" HorizontalAlignment="Left" Margin="121,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
         <TextBox x:Name="textBoxCorreo" HorizontalAlignment="Left" Margin="121,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23"/>
-        <Button x:Name="botonInsertar" Grid.Column="2" Content="Insertar" HorizontalAlignment="Left" Margin="28,21,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>
+        <Button x:Name="botonInsertar" Grid.Column="2" Content="Insertar" HorizontalAlignment="Left" Margin="28,21,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76" Click="botonInsertar_Click"/>
         <Button x:Name="botonBuscar" Grid.Column="2" Content="Buscar" HorizontalAlignment="Left" Margin="28,63,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>
         <Button x:Name="botonActualizar" Grid.Column="2" Content="Actualizar" HorizontalAlignment="Left" Margin="28,109,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>
         <Button x:Name="botonBorrar" Grid.Column="2" Content="Borrar" HorizontalAlignment="Left" Margin="28,154,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>

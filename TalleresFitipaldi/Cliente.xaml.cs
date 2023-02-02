@@ -36,5 +36,10 @@ namespace TalleresFitipaldi
         {
 
         }
+
+        private void botonInsertar_Click(object sender, RoutedEventArgs e)
+        {
+            Conexion c = new Conexion();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,25 +12,24 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using MySql.Data.MySqlClient;
+using Devart.Data.MySql;
+
 
 namespace TalleresFitipaldi
 {
-    
+
     public partial class Cliente : Window
     {
-        static MySqlConnection myConn;
+
         public Cliente()
         {
             InitializeComponent();
-            myConn = new MySqlConnection();
+
         }
         private void conectar()
         {
 
-            myConn.ConnectionString = "User Id=root;Password=nacarino;Host=127.0.0.1;";
-            myConn.Open();
-            MessageBox.Show(myConn.ServerVersion);
+
 
         }
 
@@ -50,12 +50,15 @@ namespace TalleresFitipaldi
 
         private void botonInsertar_Click(object sender, RoutedEventArgs e)
         {
-           
+
         }
 
         private void botonActualizar_Click(object sender, RoutedEventArgs e)
-        {   
-            conectar();
+        {
+
+            AccesoBDatos abd = new AccesoBDatos();
+
+
 
         }
     }

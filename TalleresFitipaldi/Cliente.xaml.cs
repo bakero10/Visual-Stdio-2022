@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
@@ -20,17 +21,11 @@ namespace TalleresFitipaldi
 
     public partial class Cliente : Window
     {
-
+        private AccesoBDatos abd;
         public Cliente()
         {
             InitializeComponent();
-
-        }
-        private void conectar()
-        {
-
-
-
+            abd= new AccesoBDatos();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -50,16 +45,20 @@ namespace TalleresFitipaldi
 
         private void botonInsertar_Click(object sender, RoutedEventArgs e)
         {
-
+            abd.insertarCliente(int.Parse(textBoxId.Text)
+                                tex);
         }
 
         private void botonActualizar_Click(object sender, RoutedEventArgs e)
         {
 
-            AccesoBDatos abd = new AccesoBDatos();
+        }
 
-
-
+        private void botonBorrar_Click(object sender, RoutedEventArgs e)
+        {
+          
+            abd.borrarCliente(int.Parse(textBoxId.Text));
+            MessageBox.Show("Cliente borrado correctament!","Información");
         }
     }
 }

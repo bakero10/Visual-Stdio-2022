@@ -12,15 +12,15 @@ public class AccesoBDatos
         myCSB = new MySqlConnectionStringBuilder();
         myCSB.Host = "localhost";
         myCSB.UserId = "root";
-        myCSB.Password = "root";
-        myCSB.Database = "WORLD";
+        myCSB.Password = "nacarino";
+        myCSB.Database = "tallerfitipaldi";
         myConnection = new MySqlConnection(myCSB.ConnectionString);
         myConnection.Open(); 
     }
 
-    public void insertarCliente(int id,String name,String country,String district,int population)
-        {
-        String sql ="INSERT INTO city VALUES("+id+","+name+","+country+","+district+","+population)"
+    public void insertarCliente(int id, String nombre, String apellidos, String dni, int telefono, String direccion, String correo)
+    {
+        String sql = "INSERT INTO cliente VALUES(" + id + ",'" + nombre + "','" + apellidos + "','" + dni + "'," + telefono + ",'" + direccion + "','" + correo + "')";
         MySqlCommand command = myConnection.CreateCommand();
         command.CommandText = sql;
         MessageBox.Show(sql);
@@ -29,7 +29,7 @@ public class AccesoBDatos
     }
     public void borrarCliente(int id)
     {
-        String sql = "DELETE FROM city WHERE id = " + id;
+        String sql = "DELETE FROM cliente WHERE idCliente = " + id;
         MySqlCommand command = myConnection.CreateCommand();
         command.CommandText = sql;
         MessageBox.Show(sql);

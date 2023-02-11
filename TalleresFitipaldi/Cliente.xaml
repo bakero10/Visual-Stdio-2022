@@ -25,7 +25,7 @@
         <StackPanel Grid.Row="0" Margin="0,217,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <Grid Width="460"/>
             <StackPanel Height="217">
-                <DataGrid Height="218" RowHeight="25" ColumnWidth="65" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Width="459" SelectionChanged="DataGrid_SelectionChanged">
+                <DataGrid x:Name="dataGridPanel" Height="218" RowHeight="25" ColumnWidth="65" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="False" Width="459" SelectionChanged="DataGrid_SelectionChanged">
                     <DataGrid.Columns >
                         <DataGridTextColumn Header="Id Usuario:"/>
                         <DataGridTextColumn Header="Nombre:"/>
@@ -137,7 +137,7 @@
         <TextBox x:Name="textBoxDireccion" HorizontalAlignment="Left" Margin="121,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23" Text="Julio Alejandro Castro Cardus Nº12 5A&#x9;"/>
         <TextBox x:Name="textBoxCorreo" HorizontalAlignment="Left" Margin="121,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.219,0.851" Height="23" Text="jmap.1512@gmail.com"/>
         <Button x:Name="botonInsertar" Grid.Column="2" Content="Insertar" HorizontalAlignment="Left" Margin="28,21,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76" Click="botonInsertar_Click"/>
-        <Button x:Name="botonBuscar" Grid.Column="2" Content="Buscar" HorizontalAlignment="Left" Margin="28,63,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76"/>
+        <Button x:Name="botonBuscar" Grid.Column="2" Content="Buscar" HorizontalAlignment="Left" Margin="28,63,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76" Click="botonBuscar_Click"/>
         <Button x:Name="botonActualizar" Grid.Column="2" Content="Actualizar" HorizontalAlignment="Left" Margin="28,109,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76" Click="botonActualizar_Click"/>
         <Button x:Name="botonBorrar" Grid.Column="2" Content="Borrar" HorizontalAlignment="Left" Margin="28,154,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76" Click="botonBorrar_Click"/>
         <TextBox x:Name="textBoxIntroduceMatricula" Grid.Column="2" HorizontalAlignment="Left" Margin="158,61,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Height="28" RenderTransformOrigin="0.5,0.5">

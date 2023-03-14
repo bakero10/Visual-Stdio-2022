@@ -30,6 +30,7 @@ public class AccesoBDatos
 
     public void insertarCliente(int id,String name,String country,String district,int population)
         {
+        /*
         String sql ="INSERT INTO city VALUES("+id+","+name+","+country+","+district+","+population)"
         MySqlCommand command = myConnection.CreateCommand();
         command.CommandText = sql;
@@ -37,9 +38,11 @@ public class AccesoBDatos
         command.ExecuteNonQuery();
         myConnection.Close();
         */
+        
     }
     public void borrarCliente(int id)
     {
+        /*
         String sql = "DELETE FROM city WHERE id = " + id;
         MySqlCommand command = myConnection.CreateCommand();
         command.CommandText = sql;
@@ -52,6 +55,7 @@ public class AccesoBDatos
     {
 
     }
+    /*
     public DataTable rellenarDataGrid()
     {
         String sql = "SELECT * FROM cliente";
@@ -64,5 +68,6 @@ public class AccesoBDatos
 
         }
     }
+    */
 
 }

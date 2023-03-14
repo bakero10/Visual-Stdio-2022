@@ -12,11 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyConexion", "MyConexion", 
 		AccesoBDatos.cs = AccesoBDatos.cs
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clases", "Clases", "{C4FD668B-9551-41FB-8874-B4A26E4CAF0E}"
-	ProjectSection(SolutionItems) = preProject
-		DatosCliente.cs = DatosCliente.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

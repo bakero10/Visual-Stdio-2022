@@ -14,21 +14,14 @@ using System.Windows.Shapes;
 
 namespace TalleresFitipaldi
 {
-
-    public partial class PaginaPrincipal : Window
+    /// <summary>
+    /// Lógica de interacción para PaginaReparacion.xaml
+    /// </summary>
+    public partial class PaginaReparacion : Window
     {
-        Cliente cliente;
-
-        public PaginaPrincipal()
+        public PaginaReparacion()
         {
             InitializeComponent();
-            cliente= new Cliente();
-        }
-
-        private void botonClientes_Click(object sender, RoutedEventArgs e)
-        {
-            cliente.Show();
-            this.Close();
         }
     }
 }

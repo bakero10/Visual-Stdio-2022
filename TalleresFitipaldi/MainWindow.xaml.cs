@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace TalleresFitipaldi
 {
     /// <summary>
@@ -20,11 +21,13 @@ namespace TalleresFitipaldi
     /// </summary>
     public partial class MainWindow : Window
     {
-        PaginaPrincipal pagina;
+        PaginaReparacion paginaReparacion;
+        PantallaPrincipal pagina;
         public MainWindow()
         {
             InitializeComponent();
-            pagina= new PaginaPrincipal();  
+            pagina= new PantallaPrincipal();  
+            paginaReparacion= new PaginaReparacion();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

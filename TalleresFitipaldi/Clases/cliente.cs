@@ -7,31 +7,82 @@ using System.Threading.Tasks;
 
 namespace TalleresFitipaldi.Clases
 {
-    internal class cliente
+    internal class Cliente
     {
-        private int id { get; set; }
-        private String nombre { get; set; }
-        private String apellidos { get; set; }
-        private String dni { get; set; }
-        private int telefono { get; set; }
+        public int id;
+        public String nombre;
+        public String apellidos;
+        public String dni;
+        public int telefono;
+        public String direccion;
+        public String email;
 
-        private String direccion { get; set; }
-        private String email { get; set; }
-
-        public cliente(int id, string nombre, string apellidos, string dni, int telefono, string direccion, string email)
+        public Cliente()
         {
-            this.id = id;
-            this.nombre = nombre;
-            this.apellidos = apellidos;
-            this.dni = dni;
-            this.telefono = telefono;
-            this.direccion = direccion;
-            this.email = email;
         }
-        // Método ToString() de la clase
-        public override string ToString()
+
+        public Cliente(int id, string nombre, string apellidos, string dni, int telefono, string direccion, string email)
         {
-            return id + " " + nombre + " " + apellidos + " " + dni + " " + telefono + " " + direccion + " " + email;
+            Id = id;
+            Nombre = nombre;
+            Apellidos = apellidos;
+            Dni = dni;
+            Telefono = telefono;
+            Direccion = direccion;
+            Email = email;
+        }
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+        public string Apellidos
+        {
+            get { return apellidos; }
+            set { apellidos = value; }
+        }
+
+        public string Dni
+        {
+            get { return dni; }
+            set { dni = value; }
+        }
+
+        public int Telefono
+        {
+            get { return telefono; }
+            set { telefono = value; }
+        }
+
+        public string Direccion
+        {
+            get { return direccion; }
+            set { direccion = value; }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+    
+
+    // Método ToString() de la clase
+    public override string ToString()
+        {
+            return base.ToString() + ": " + Id + " " + Nombre + " " + Apellidos + " " + Dni + " " + Telefono + " " + Direccion + " " + Email;
         }
     }
+
+
+
+
 }

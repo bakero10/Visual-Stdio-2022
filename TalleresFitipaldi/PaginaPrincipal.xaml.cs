@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,15 +15,16 @@ using System.Windows.Shapes;
 
 namespace TalleresFitipaldi
 {
-
+  
     public partial class PaginaPrincipal : Window
     {
-        Cliente cliente;
+        List<cliente> listaClientes;
 
         public PaginaPrincipal()
         {
             InitializeComponent();
-            cliente= new Cliente();
+            listaClientes = new 
+                List<cliente>();
         }
 
         private void botonClientes_Click(object sender, RoutedEventArgs e)

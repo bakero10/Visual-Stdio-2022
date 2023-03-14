@@ -11,11 +11,13 @@ using System.Windows.Documents;
 
 public class AccesoBDatos
 {
-
+    /*
     private MySqlConnectionStringBuilder myCSB;
     private MySqlConnection myConnection;
+    */
 
     public AccesoBDatos() {
+        /*
         myCSB = new MySqlConnectionStringBuilder();
         myCSB.Host = "localhost";
         myCSB.UserId = "root";
@@ -23,36 +25,32 @@ public class AccesoBDatos
         myCSB.Database = "tallerfitipaldi";
         myConnection = new MySqlConnection(myCSB.ConnectionString);
         myConnection.Open(); 
+        */
     }
 
-    public void insertarCliente(int id, String nombre, String apellidos, String dni, int telefono, String direccion, String correo)
-    {
-        String sql = "INSERT INTO cliente VALUES(" + id + ",'" + nombre + "','" + apellidos + "','" + dni + "'," + telefono + ",'" + direccion + "','" + correo + "')";
+    public void insertarCliente(int id,String name,String country,String district,int population)
+        {
+        String sql ="INSERT INTO city VALUES("+id+","+name+","+country+","+district+","+population)"
         MySqlCommand command = myConnection.CreateCommand();
         command.CommandText = sql;
         MessageBox.Show(sql);
         command.ExecuteNonQuery();
         myConnection.Close();
+        */
     }
     public void borrarCliente(int id)
     {
-        String sql = "DELETE FROM cliente WHERE idCliente = " + id;
+        String sql = "DELETE FROM city WHERE id = " + id;
         MySqlCommand command = myConnection.CreateCommand();
         command.CommandText = sql;
         MessageBox.Show(sql);
         command.ExecuteNonQuery();
         myConnection.Close();
+        */
     }
-
-    public void actualizarCliente(int id, String nombre, String apellidos, String dni, int telefono, String direccion, String correo)
+    public void actualizarCliente(int id)
     {
-       
-        String sql = "UPDATE cliente SET Nombre = '"+nombre+"', Apellidos = '"+apellidos+"', DNI = '"+dni+"',Telefono="+telefono+", Direccion='"+direccion+"',Correo='"+correo+"' WHERE idCliente = "+id;
-        MySqlCommand command = myConnection.CreateCommand();
-        command.CommandText = sql;
-        MessageBox.Show(sql);
-        command.ExecuteNonQuery();
-        myConnection.Close();
+
     }
     public DataTable rellenarDataGrid()
     {

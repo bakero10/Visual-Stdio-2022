@@ -21,11 +21,11 @@ using Devart.Data.MySql;
 namespace TalleresFitipaldi
 {
 
-    public partial class Cliente : Window
+    public partial class cliente : Window
     {
         private DataGrid dataGrid;
         private AccesoBDatos abd;
-        public Cliente()
+        public cliente()
         {
             InitializeComponent();
             abd= new AccesoBDatos();

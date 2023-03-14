@@ -20,13 +20,11 @@ namespace TalleresFitipaldi
     /// </summary>
     public partial class MainWindow : Window
     {
-        PaginaPrincipal Pagina;
-        
+        PaginaPrincipal pagina;
         public MainWindow()
         {
             InitializeComponent();
-            Pagina= new PaginaPrincipal();  
-            
+            pagina= new PaginaPrincipal();  
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,7 +32,7 @@ namespace TalleresFitipaldi
                 if (textboxUsuario.Text.Equals("Pepe"))
                 {
                     MessageBox.Show("Usuario y contraseña correcto!");
-                    Pagina.Show();
+                    pagina.Show();
                     this.Close();
                 }
                 else

@@ -14,14 +14,10 @@ public class AccesoBDatos
     /*
     private MySqlConnectionStringBuilder myCSB;
     private MySqlConnection myConnection;
-<<<<<<< HEAD:TalleresFitipaldi/MyConexion/AccesoBDatos.cs
-    */
-
-=======
     private DataGrid myGrid;
->>>>>>> actualizo:TalleresFitipaldi/AccesoBDatos.cs
+    */
+    /*
     public AccesoBDatos() {
-        /*
         myCSB = new MySqlConnectionStringBuilder();
         myCSB.Host = "localhost";
         myCSB.UserId = "root";
@@ -29,53 +25,46 @@ public class AccesoBDatos
         myCSB.Database = "tallerfitipaldi";
         myConnection = new MySqlConnection(myCSB.ConnectionString);
         myConnection.Open(); 
-        */
     }
-
-    public void insertarCliente(int id,String name,String country,String district,int population)
-        {
-        /*
-        String sql ="INSERT INTO city VALUES("+id+","+name+","+country+","+district+","+population)"
+    */
+    /*
+    public void insertarCliente(int id, String nombre, String apellidos, String dni, int telefono, String direccion, String correo)
+    {
+        String sql = "INSERT INTO cliente VALUES(" + id + ",'" + nombre + "','" + apellidos + "','" + dni + "'," + telefono + ",'" + direccion + "','" + correo + "')";
         MySqlCommand command = myConnection.CreateCommand();
         command.CommandText = sql;
         MessageBox.Show(sql);
         command.ExecuteNonQuery();
         myConnection.Close();
-        */
-        
     }
-
+    */
+    /*
     public void borrarCliente(int id)
     {
-        /*
-        String sql = "DELETE FROM city WHERE id = " + id;
+        String sql = "DELETE FROM cliente WHERE idCliente = " + id;
         MySqlCommand command = myConnection.CreateCommand();
         command.CommandText = sql;
         MessageBox.Show(sql);
         command.ExecuteNonQuery();
         myConnection.Close();
-        */
     }
-    public void actualizarCliente(int id)
-    {
-
-    }
-<<<<<<< HEAD:TalleresFitipaldi/MyConexion/AccesoBDatos.cs
+    */
     /*
-    public DataTable rellenarDataGrid()
+    public void actualizarCliente(int id, String nombre, String apellidos, String dni, int telefono, String direccion, String correo)
     {
-        String sql = "SELECT * FROM cliente";
-        using (MySqlDataAdapter adapter = new MySqlDataAdapter(sql, myConnection))
-        {
-            // Crea un objeto DataTable y llena los datos utilizando el objeto SqlDataAdapter
-            DataTable data = new DataTable();
-            adapter.Fill(data);
-            return data;
-=======
+       
+        String sql = "UPDATE cliente SET Nombre = '"+nombre+"', Apellidos = '"+apellidos+"', DNI = '"+dni+"',Telefono="+telefono+", Direccion='"+direccion+"',Correo='"+correo+"' WHERE idCliente = "+id;
+        MySqlCommand command = myConnection.CreateCommand();
+        command.CommandText = sql;
+        MessageBox.Show(sql);
+        command.ExecuteNonQuery();
+        myConnection.Close();
+    }
+    */
+    /*
     public List<DatosCliente> Rellenar(){
 
        List<DatosCliente> lista = new List<DatosCliente>();
->>>>>>> actualizo:TalleresFitipaldi/AccesoBDatos.cs
 
         DatosCliente dc = new DatosCliente(1,"José Miguel","Andrés Pérez","18049608j",699687316,"Julio Alejandro Castro Cardus Nº12","bakero__10@hotmail.com");
         DatosCliente dc1 = new DatosCliente(1, "María", "Castro Bolea", "18053265l", 666333222, "Julio Alejandro Castro Cardus Nº12", "mariacb01@hotmail.com");

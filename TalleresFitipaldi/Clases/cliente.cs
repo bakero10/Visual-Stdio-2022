@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -7,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace TalleresFitipaldi.Clases
 {
-    internal class Cliente
+    internal class Cliente : INotifyPropertyChanged
     {
-        public int id;
-        public String nombre;
-        public String apellidos;
-        public String dni;
-        public int telefono;
-        public String direccion;
-        public String email;
+        private int id;
+        private String nombre;
+        private String apellidos;
+        private String dni;
+        private int telefono;
+        private String direccion;
+        private String email;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public Cliente()
         {
@@ -23,60 +25,86 @@ namespace TalleresFitipaldi.Clases
 
         public Cliente(int id, string nombre, string apellidos, string dni, int telefono, string direccion, string email)
         {
-            Id = id;
-            Nombre = nombre;
-            Apellidos = apellidos;
-            Dni = dni;
-            Telefono = telefono;
-            Direccion = direccion;
-            Email = email;
+            this.id = id;
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.dni = dni;
+            this.telefono = telefono;
+            this.direccion = direccion;
+            this.email = email;
         }
 
         public int Id
         {
             get { return id; }
-            set { id = value; }
+            set { id = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Id"));
+            }
         }
 
         public string Nombre
         {
             get { return nombre; }
-            set { nombre = value; }
+            set
+            {
+                nombre = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Nombre"));
+            }
         }
 
         public string Apellidos
         {
             get { return apellidos; }
-            set { apellidos = value; }
+            set
+            {
+                apellidos = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Apellidos"));
+            }
         }
 
         public string Dni
         {
             get { return dni; }
-            set { dni = value; }
+            set
+            {
+                dni = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Dni"));
+            }
         }
 
         public int Telefono
         {
             get { return telefono; }
-            set { telefono = value; }
+            set
+            {
+                telefono = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Telefono"));
+            }
         }
 
         public string Direccion
         {
             get { return direccion; }
-            set { direccion = value; }
+            set
+            {
+                direccion = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Direccion"));
+            }
         }
 
         public string Email
         {
             get { return email; }
-            set { email = value; }
+            set
+            {
+                email = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Email"));
+            }
         }
-    
 
-    // Método ToString() de la clase
-    public override string ToString()
+
+        // Método ToString() de la clase
+        public override string ToString()
         {
             return base.ToString() + ": " + Id + " " + Nombre + " " + Apellidos + " " + Dni + " " + Telefono + " " + Direccion + " " + Email;
         }

@@ -25,7 +25,7 @@
         <StackPanel Grid.Row="0" Margin="0,217,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <Grid Width="460"/>
             <StackPanel Height="217">
-                <DataGrid x:Name="dataGridPanel" Loaded="dataGridPanel_Loaded" Height="218" RowHeight="25" ColumnWidth="65"  AutoGenerateColumns="True" Width="536" SelectionChanged="DataGrid_SelectionChanged"/>
+                <DataGrid x:Name="dataGridPanel" Height="218" RowHeight="25" ColumnWidth="76.6"  AutoGenerateColumns="True" Width="536" />
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="0" Margin="0,0,154,0">
@@ -106,38 +106,40 @@
                 </Label.RenderTransform>
             </Label>
         </StackPanel>
-        <TextBox x:Name="textBoxId" HorizontalAlignment="Left" Margin="121,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="23" Text="2"/>
+        <TextBox x:Name="textBoxId" HorizontalAlignment="Left" Margin="121,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="23" Text="6"/>
         <StackPanel Grid.Column="1">
+            <Label x:Name="labelDniCoche" Content="Dni:" HorizontalAlignment="Right" Width="80" Height="23.96"/>
             <Label x:Name="labelMatricula" Content="Matricula:" HorizontalAlignment="Right" Width="80" Height="23.96"/>
             <Label x:Name="labelMarca" Content="Marca:" HorizontalAlignment="Right" Width="80" Height="23.96"/>
             <Label x:Name="labelModelo" Content="Modelo:" HorizontalAlignment="Right" Width="81" Height="23.96"/>
             <Label x:Name="labelColor" Content="Color:" HorizontalAlignment="Right" Width="80" Height="23.96"/>
         </StackPanel>
-        <StackPanel Grid.Column="2" RenderTransformOrigin="0.5,0.5">
+        <StackPanel Grid.Column="2" RenderTransformOrigin="0.523,0.507">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="0.476"/>
-                    <TranslateTransform/>
+                    <TranslateTransform X="-0.012" Y="0.05"/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <TextBox x:Name="textBoxMatricula" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96"/>
-            <TextBox x:Name="textBoxMarca" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96" TextChanged="TextBox_TextChanged"/>
-            <TextBox x:Name="textBoxModelo" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96" TextChanged="TextBox_TextChanged_1"/>
-            <TextBox x:Name="textBoxColor" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96"/>
+            <TextBox x:Name="textBoxDniCoche" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96" Text="18049699G" />
+            <TextBox x:Name="textBoxMatricula" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96" Text="2589GYR"/>
+            <TextBox x:Name="textBoxMarca" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96"  Text="Seat"/>
+            <TextBox x:Name="textBoxModelo" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96" TextChanged="TextBox_TextChanged_1" Text="Cordoba"/>
+            <TextBox x:Name="textBoxColor" TextWrapping="Wrap" Width="120" HorizontalAlignment="Left" Height="23.96" Text="Azul"/>
         </StackPanel>
-        <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Margin="121,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"  Height="23" Text="Jose Miguel"/>
-        <TextBox x:Name="textBoxApellido" HorizontalAlignment="Left" Margin="121,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"  Height="23" Text="Andres Perez"/>
-        <TextBox x:Name="textBoxDNI" HorizontalAlignment="Left" Margin="121,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"  Height="23" Text="18049608j"/>
-        <TextBox x:Name="textBoxTelefono" HorizontalAlignment="Left" Margin="121,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"  Height="23" Text="699687316"/>
-        <TextBox x:Name="textBoxDireccion" HorizontalAlignment="Left" Margin="121,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="23" Text="Julio Alejandro Castro Cardus Nº12 5A&#x9;"/>
-        <TextBox x:Name="textBoxCorreo" HorizontalAlignment="Left" Margin="121,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="23" Text="jmap.1512@gmail.com"/>
-        <Button x:Name="botonInsertar" Grid.Column="2" Content="Insertar" HorizontalAlignment="Right" Margin="0,112,35,0" VerticalAlignment="Top" Height="28" Width="76" Click="botonInsertar_Click"/>
-        <Button x:Name="botonBuscar" Grid.Column="2" Content="Buscar" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Height="28" Width="76" Click="botonBuscar_Click" Margin="155,0,0,0"/>
-        <Button x:Name="botonActualizar" Grid.Column="2" Content="Actualizar" Margin="155,64,35,0" VerticalAlignment="Top" Height="28" Click="botonActualizar_Click"/>
-        <Button x:Name="botonBorrar" Grid.Column="2" Content="Borrar" HorizontalAlignment="Left" Margin="155,164,0,0" VerticalAlignment="Top" Height="28" Width="76" Click="botonBorrar_Click" />
-        <TextBox x:Name="textBoxIntroduceMatricula" Grid.Column="2" HorizontalAlignment="Left" Margin="123,49,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Height="28" >
+        <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Margin="121,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"  Height="23" Text="Miguel"/>
+        <TextBox x:Name="textBoxApellido" HorizontalAlignment="Left" Margin="121,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"  Height="23" Text="Alvarez"/>
+        <TextBox x:Name="textBoxDNI" HorizontalAlignment="Left" Margin="121,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"  Height="23" Text="18049699G"/>
+        <TextBox x:Name="textBoxTelefono" HorizontalAlignment="Left" Margin="121,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"  Height="23" Text="699687487"/>
+        <TextBox x:Name="textBoxDireccion" HorizontalAlignment="Left" Margin="121,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="23" Text="Tardienta"/>
+        <TextBox x:Name="textBoxCorreo" HorizontalAlignment="Left" Margin="121,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="23" Text="miguel@gmail.com"/>
+        <Button x:Name="botonInsertar" Content="Insertar" HorizontalAlignment="Right" Margin="0,175,189,0" VerticalAlignment="Top" Height="28" Width="76" Click="botonInsertar_Click"/>
+        <Button x:Name="botonBuscar" Grid.Column="2" Content="Buscar" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="76" Click="botonBuscar_Click" Margin="105,90,0,0"/>
+        <Button x:Name="botonActualizar" Content="Actualizar" Margin="100,175,99,0" VerticalAlignment="Top" Height="28" Click="botonActualizar_Click"/>
+        <Button x:Name="botonBorrar" Content="Borrar" HorizontalAlignment="Left" Margin="199,175,0,0" VerticalAlignment="Top" Height="28" Width="76" Click="botonBorrar_Click" />
+        <TextBox x:Name="textBoxIntroduceMatricula" Grid.Column="2" HorizontalAlignment="Left" Margin="68,49,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Height="28" >
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -147,8 +149,8 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label Grid.Column="2" Content="  Introduce la matricula:" HorizontalAlignment="Left" Margin="124,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Height="26"/>
-        <TextBox x:Name="textBoxIntroduceDNI" Grid.Column="2" HorizontalAlignment="Left" Margin="124,177,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Height="28" RenderTransformOrigin="0.5,0.5">
+        <Label Grid.Column="2" Content="  Introduce la matricula:" HorizontalAlignment="Left" Margin="74,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Height="26"/>
+        <TextBox x:Name="textBoxIntroduceDNI" Grid.Column="2" HorizontalAlignment="Left" Margin="76,177,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Height="28" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -158,6 +160,9 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label x:Name="labelIntroduceDni" Grid.Column="2" Content="               Introduce DNI:" HorizontalAlignment="Left" Margin="94,135,0,0" Grid.Row="1" VerticalAlignment="Top" Width="162" Height="26"/>
+        <Label x:Name="labelIntroduceDni" Grid.Column="2" Content="               Introduce DNI:" HorizontalAlignment="Left" Margin="59,135,0,0" Grid.Row="1" VerticalAlignment="Top" Width="162" Height="26"/>
+        <Button x:Name="botonBorrar_Coche" Content="Borrar" HorizontalAlignment="Left" Margin="164,150,0,0" VerticalAlignment="Top" Height="28" Width="76"  Grid.Column="2" Click="botonBorrar_Coche_Click" />
+        <Button x:Name="botonActualizar_Coche" Content="Actualizar" Margin="164,92,26,0" VerticalAlignment="Top" Height="28"  Grid.Column="2" Click="botonActualizar_Coche_Click"/>
+        <Button x:Name="botonInsertar_Coche" Content="Insertar" HorizontalAlignment="Right" Margin="0,30,26,0" VerticalAlignment="Top" Height="28" Width="76"  Grid.Column="2" Click="botonInsertar_Coche_Click"/>
     </Grid>
 </Window>

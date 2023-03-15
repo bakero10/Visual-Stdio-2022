@@ -23,31 +23,13 @@ namespace TalleresFitipaldi
         
         PantallaCliente pantallaCliente;
         PaginaReparacion paginaReparacion;
-        
-        List<Clases.Coche> listaCoches;
 
         public PantallaPrincipal()
         {
             InitializeComponent();
             
-            listaCoches = new List<Clases.Coche>();
             paginaReparacion = new PaginaReparacion();
             pantallaCliente= new PantallaCliente();
-           
-
-            
-
-            Clases.Coche co1 = new Clases.Coche("2670POR","Renault","Trafic","Blanco");
-            Clases.Coche co2 = new Clases.Coche("3454GYR","Kia","Rio","Rosa");
-            Clases.Coche co3 = new Clases.Coche("4456GYY","Ford","Fiesta","Rojo");
-
-            
-
-           listaCoches.Add(co1);
-           listaCoches.Add(co2);   
-           listaCoches.Add(co3);   
-            
-           
 
 
         }

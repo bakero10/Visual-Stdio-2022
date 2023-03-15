@@ -13,8 +13,8 @@ namespace TalleresFitipaldi.MyConexion
     public class AccesoBDatos
     {
 
-        private MySqlConnectionStringBuilder myCSB;
-        private MySqlConnection myConnection;
+      //  private MySqlConnectionStringBuilder myCSB;
+      //  private MySqlConnection myConnection;
 
 
 

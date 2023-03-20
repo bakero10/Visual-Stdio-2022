@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TalleresFitipaldi.Clases
 {
-    internal class Coche : INotifyPropertyChanged
+    public class Coche1 : INotifyPropertyChanged
     {
         private String dni;
         private String matricula;
@@ -17,13 +17,17 @@ namespace TalleresFitipaldi.Clases
         private String color;
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public Coche(string dni, string matricula, string marca, string modelo, string color)
+        public Coche1()
         {
-            this.dni = dni; 
+        }
+
+        public Coche1(string dni, string matricula, string marca, string modelo, string color)
+        {
+            this.dni = dni;
             this.matricula = matricula;
-            this.Marca = marca;
-            this.Modelo = modelo;
-            this.Color = color;
+            this.marca = marca;
+            this.modelo = modelo;
+            this.color = color;
         }
 
         public String Dni

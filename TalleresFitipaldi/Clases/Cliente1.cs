@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TalleresFitipaldi.Clases
 {
-    internal class Cliente : INotifyPropertyChanged
+    public class Cliente1 : INotifyPropertyChanged
     {
         private int id;
         private String nombre;
@@ -19,11 +19,11 @@ namespace TalleresFitipaldi.Clases
         private String email;
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public Cliente()
+        public Cliente1()
         {
         }
 
-        public Cliente(int id, string nombre, string apellidos, string dni, int telefono, string direccion, string email)
+        public Cliente1(int id, string nombre, string apellidos, string dni, int telefono, string direccion, string email)
         {
             this.id = id;
             this.nombre = nombre;
@@ -37,7 +37,9 @@ namespace TalleresFitipaldi.Clases
         public int Id
         {
             get { return id; }
-            set { id = value;
+            set
+            {
+                id = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("Id"));
             }
         }
@@ -114,3 +116,5 @@ namespace TalleresFitipaldi.Clases
 
 
 }
+
+

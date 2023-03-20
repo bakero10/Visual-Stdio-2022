@@ -34,13 +34,13 @@ namespace TalleresFitipaldi
         {        
                 if (textboxUsuario.Text.Equals("Pepe"))
                 {
-                    MessageBox.Show("Usuario y contraseña correcto!");
+                    MessageBox.Show("Usuario y contraseña correcto!", "Confirmado!");
                     pagina.Show();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o contraseña incorrecto!");
+                    MessageBox.Show("Usuario o contraseña incorrecto!", "Error");
                 } 
         }
     }

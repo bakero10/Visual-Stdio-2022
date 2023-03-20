@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TalleresFitipaldi"
         mc:Ignorable="d"
-        Title="PaginaReparacion" Height="450" Width="800">
-    <Grid>
+        Title="PaginaReparacion" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,10,0">
         <Image Source="/taller.jpg" Stretch="Fill"/>
         <Label x:Name="labelTalleresFitipaldi" Content="Talleres Fitipaldi" HorizontalAlignment="Left" Margin="-58,142,0,0" VerticalAlignment="Top" Width="368" Height="65" FontFamily="Showcard Gothic" FontSize="36" Foreground="Black" RenderTransformOrigin="0.477,-0.11">
             <Label.RenderTransform>
@@ -18,5 +18,18 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <ListView x:Name="cochesListView" Width="400" ItemsSource="{Binding Coches}" Margin="267,29,62,200" MouseDoubleClick="cochesListView_MouseDoubleClick" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="DNI" DisplayMemberBinding="{Binding Dni}" />
+                    <GridViewColumn Header="Matrícula" DisplayMemberBinding="{Binding Matricula}" />
+                    <GridViewColumn Header="Marca" DisplayMemberBinding="{Binding Marca}" />
+                    <GridViewColumn Header="Modelo" DisplayMemberBinding="{Binding Modelo}" />
+                    <GridViewColumn Header="Color" DisplayMemberBinding="{Binding Color}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="textBoxVehiculoCliente" HorizontalAlignment="Left" Margin="130,270,0,0" TextWrapping="Wrap" Text="HORAS INVERTIDAS EN LA REALIZACION DE LA REPARACION:" VerticalAlignment="Top" Width="568" Height="62"/>
+        <Button x:Name="botonInforme" Content="Informe" HorizontalAlignment="Left" Margin="348,361,0,0" VerticalAlignment="Top" Width="126" Height="29" RenderTransformOrigin="0.88,0.614" Click="botonInforme_Click"/>
     </Grid>
 </Window>

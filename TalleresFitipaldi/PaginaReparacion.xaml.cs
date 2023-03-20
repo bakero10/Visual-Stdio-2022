@@ -16,9 +16,12 @@ using System.Windows.Shapes;
 using DevExpress.XtraReports.UI;
 using TalleresFitipaldi.Clases;
 using DevExpress.XtraReports;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraPrinting;
 
 using DevExpress.XtraPrinting;
+using System.Data;
+using DevExpress.DataAccess.ObjectBinding;
 
 namespace TalleresFitipaldi
 {
@@ -27,7 +30,7 @@ namespace TalleresFitipaldi
     /// </summary>
     public partial class PaginaReparacion : Window
     {
-     
+
         ObservableCollection<Cliente1> listClientes;
         ObservableCollection<Coche1> listCoches;
         public PaginaReparacion()
@@ -44,6 +47,9 @@ namespace TalleresFitipaldi
 
         private void cochesListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            ObjetosVer.cocheVisto = (Coche1)cochesListView.SelectedItem;
+            ObjectDataSource objectDataSource = new ObjectDataSource();
+            objectDataSource.DataSource = cochesListView.SelectedItem;
             Random rnd = new Random();
             int numeroAleatorio = rnd.Next(1, 21);
             Coche1 cocheSeleccionado = (Coche1)cochesListView.SelectedItem;
@@ -51,27 +57,22 @@ namespace TalleresFitipaldi
             {
                 if (cliente.Dni.Equals(cocheSeleccionado.Dni))
                 {
+                    ObjetosVer.clienteVisto = cliente;
+                    objectDataSource.DataSource = cliente;
                     textBoxVehiculoCliente.Text = ("El cliente: " + cliente.Nombre + " " + cliente.Apellidos + "\rCon el Vehiculo: " + cocheSeleccionado.Marca + " - " + cocheSeleccionado.Modelo + " - " + cocheSeleccionado.Matricula + " - " + cocheSeleccionado.Color+
                         "\rEl total de horas realizadas en la reparacion es de: "+numeroAleatorio);
-                    
+                   
                 }
             }
-           
         }
 
         private void botonInforme_Click(object sender, RoutedEventArgs e)
         {
 
+            // Crea una instancia del objeto ReportPrintTool
+           // ReportPrintTool printTool = new ReportPrintTool(myReport);
 
-            /*
-            // Exportar el informe a formato PDF
-            string path = "C:/Users/Bakero/Desktop/PruebaInforme/informe.pdf";
-            PdfExportOptions opcionesExport = new PdfExportOptions();
-            informe.ExportToPdf(path, opcionesExport);
 
-            // Abrir el archivo PDF con la aplicación predeterminada
-            System.Diagnostics.Process.Start(path);
-            */
         }
     }
 }

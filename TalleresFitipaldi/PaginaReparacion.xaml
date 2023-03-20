@@ -30,6 +30,6 @@
             </ListView.View>
         </ListView>
         <TextBox x:Name="textBoxVehiculoCliente" HorizontalAlignment="Left" Margin="130,270,0,0" TextWrapping="Wrap" Text="HORAS INVERTIDAS EN LA REALIZACION DE LA REPARACION:" VerticalAlignment="Top" Width="568" Height="62"/>
-        <Button x:Name="botonInforme" Content="Informe" HorizontalAlignment="Left" Margin="348,361,0,0" VerticalAlignment="Top" Width="126" Height="29" RenderTransformOrigin="0.88,0.614" Click="botonInforme_Click"/>
+        <Button x:Name="botonInforme" Content="Informe" HorizontalAlignment="Left" Margin="348,361,0,0" VerticalAlignment="Top" Width="126" Height="29" RenderTransformOrigin="0.5,0.5" Click="botonInforme_Click"/>
     </Grid>
 </Window>

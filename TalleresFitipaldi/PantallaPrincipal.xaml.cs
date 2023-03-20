@@ -86,20 +86,15 @@ namespace TalleresFitipaldi
         {
             
             pantallaCliente.Show();
-            this.Close();
+            
         }
 
         private void botonReparaciones_Click(object sender, RoutedEventArgs e)
         {
             
             paginaReparacion.Show();
-            this.Close();
-        }
-
-        private void botonTabla_Click(object sender, RoutedEventArgs e)
-        {
             
-
         }
+
     }
 }
